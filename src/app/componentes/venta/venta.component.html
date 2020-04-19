@@ -1,0 +1,53 @@
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-id">Id</span>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]='venta.id' >
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-descripcion">Descripcion</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="venta.descripcion">
+</div>
+
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-vencimiento">Fecha de Vencimiento</span>
+    </div>
+    <input type="date" class="form-control" [(ngModel)]="venta.fechaVencimiento" name='fechaVencimiento'>
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-precio">Precio</span>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="venta.precio" type="number" name='precio'>
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-imagen">Imagen</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="venta.rutaDeFoto" name='rutaDeFoto'>
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-vencimiento">Fecha de venta</span>
+    </div>
+    <input type="date" class="form-control" [(ngModel)]="venta.fechaDeVenta" >
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-precio">Cantidad</span>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="venta.cantidad" type="number" >
+    </div>
+
+<button class="btn-lg btn-success btn-block" (click)='crearVenta()'>Vender</button>
+

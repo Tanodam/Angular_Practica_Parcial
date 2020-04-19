@@ -9,6 +9,7 @@ import { BotonComponent } from './componentes/boton/boton.component';
 import { ListaComponent } from './componentes/lista/lista.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { InformadorComponent } from './componentes/informador/informador.component';
+import { VentaComponent } from './componentes/venta/venta.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InformadorComponent } from './componentes/informador/informador.compone
     BotonComponent,
     ListaComponent,
     BuscadorComponent,
-    InformadorComponent
+    InformadorComponent,
+    VentaComponent
   ],
   imports: [
     BrowserModule,
