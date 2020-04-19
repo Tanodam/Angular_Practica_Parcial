@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+        <h3 class="widgettitle">Alta de Producto</h3>
+        <div>
+          <app-producto (altaProducto)="alta($event)"></app-producto>
+        </div>  
+    </div>
+    <div class="col-sm">
+      <section class="widget clearfix" >
+        <div>
+          <app-lista [listadoProductos]='productos' (productoSeleccionado)="seleccionar($event)"></app-lista>
+          <app-boton [productoSeleccionado]='producto' (productoSeleccionadoParaBaja)='baja($event)'></app-boton>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <app-buscador (productoEncontrado)='seleccionar($event)'></app-buscador>      
+    </div>
+    <div class="col-sm">
+      <app-informador [producto]='producto'></app-informador>
+    </div>
+  </div>
+</div>

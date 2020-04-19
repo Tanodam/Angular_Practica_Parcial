@@ -1,0 +1,50 @@
+
+  <div *ngIf="!producto">
+      <button class="btn btn-lg btn-primary "  (click)="nuevoProducto()">Nuevo </button>
+  </div>
+  <div *ngIf="producto"> 
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-id">Id</span>
+      </div>
+      <input type="number" class="form-control" [(ngModel)]='producto.id' placeholder='Código de producto'>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-descripcion">Descripcion</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="producto.descripcion" placeholder='Ingrese descripcion' >
+    </div>
+
+    Tipo
+    <div class="input-group mb-3">
+      <div class="input-group-prepend" id="button-tipo">
+        <button class="btn btn-outline-secondary" (click)="setTipo('solido')"  type="button">Solido</button>
+        <button class="btn btn-outline-secondary" (click)="setTipo('liquido')" type="button">Liquido</button>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-vencimiento">Fecha de Vencimiento</span>
+      </div>
+      <input type="date" class="form-control" [(ngModel)]="producto.fechaVencimiento" name='fechaVencimiento'>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-precio">Precio</span>
+      </div>
+      <input type="number" class="form-control" [(ngModel)]="producto.precio" type="number" name='precio'>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-imagen">Imagen</span>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="producto.rutaDeFoto" name='rutaDeFoto' placeholder="Ingrese ruta de imagen">
+    </div>
+
+    <button class="btn-lg btn-success btn-block" (click)='crearProducto()'>Alta</button>
+  </div>

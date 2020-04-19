@@ -1,0 +1,23 @@
+
+  <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th><h3>Id</h3></th>
+          <th><h3>Descripcion</h3></th>
+          <th><h3>Tipo</h3></th>
+          <th><h3>Fecha de vencimiento</h3></th>
+          <th><h3>Precio</h3></th>
+          <th><h3>Imagen</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of listadoProductos">
+          <td (click)="seleccionar(producto)"><h3>{{producto.id}}</h3></td>
+          <td (click)="seleccionar(producto)"><h3>{{producto.descripcion}}</h3></td>
+          <td (click)="seleccionar(producto)"><h3>{{producto.tipo}}</h3></td>
+          <td (click)="seleccionar(producto)"><h3>{{producto.fechaVencimiento | date: "yyyy-MM-dd"}}</h3></td>
+          <td (click)="seleccionar(producto)"><h3>{{producto.precio}}</h3></td>
+          <td (click)="seleccionar(producto)"><h3><img src="{{producto.rutaDeFoto}}" alt={{producto.descripcion}}></h3></td>
+        </tr>
+      </tbody>
+  </table>
